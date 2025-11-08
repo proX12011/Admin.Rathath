@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap');
+
+:root{
+  --r1:#ff2d2d;
+  --r2:#0b0b0b;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Cairo",sans-serif;
+  margin:0;
+  background:#fff;
+  direction:rtl;
+  color:var(--r2);
+}
+
+.container{
+  max-width:1000px;
+  margin:20px auto;
+  padding:16px;
+}
+
+.admin-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+.logo-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+#admin-logo{
+  width:60px;
+  height:60px;
+  border-radius:10px;
+  object-fit:cover;
+  background:linear-gradient(90deg,var(--r1),#c8102e);
+}
+
+h1{
+  margin:0;
+}
+
+.admin-section{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-bottom:18px;
+}
+
+.form-block{
+  flex:1;
+  min-width:300px;
+  background:#fff;
+  padding:14px;
+  border-radius:12px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.04);
+}
+
+.form-block h3{
+  margin-top:0;
+}
+
+label{
+  display:block;
+  margin-top:8px;
+  font-weight:700;
+}
+
+input, textarea, select{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #eee;
+  margin-top:6px;
+}
+
+.row{
+  display:flex;
+  gap:10px;
+}
+
+.col{
+  flex:1;
+}
+
+.btn{
+  background:linear-gradient(90deg,var(--r1),#c8102e);
+  color:#fff;
+  border:none;
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:800;
+}
+
+.msg{
+  margin-top:8px;
+  color:#c22;
+}
+
+.products-list{
+  display:grid;
+  gap:10px;
+  margin-top:12px;
+}
+
+.product-item{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  padding:10px;
+  border-radius:10px;
+  background:#fff;
+  box-shadow:0 8px 20px rgba(0,0,0,0.04);
+}
+
+.product-item img{
+  width:80px;
+  height:80px;
+  border-radius:8px;
+  object-fit:cover;
+}
+
+.product-info{
+  flex:1;
+}
+
+.product-actions{
+  display:flex;
+  gap:8px;
+}
+
+.action-edit{
+  background:#00c3ff;
+  color:#fff;
+  border:none;
+  padding:8px 10px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:700;
+}
+
+.action-delete{
+  background:var(--r1);
+  color:#fff;
+  border:none;
+  padding:8px 10px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:700;
+}

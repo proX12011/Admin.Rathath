@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>لوحة إدارة رَذَاذ</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+<script defer src="firebase-config.js"></script>
+<script defer src="script.js"></script>
+</head>
+
+<body>
+<div class="container">
+  <header class="admin-header">
+    <div class="logo-row">
+      <img id="admin-logo" src="" alt="logo" />
+      <h1>لوحة إدارة رَذَاذ</h1>
+    </div>
+  </header>
+
+  <section class="admin-section">
+    <div class="form-block">
+      <h3>إضافة منتج جديد</h3>
+
+      <label>الاسم</label>
+      <input id="pName" type="text" />
+
+      <label>الوصف</label>
+      <textarea id="pDesc" rows="3"></textarea>
+
+      <div class="row">
+        <div class="col">
+          <label>السعر (الأساسي)</label>
+          <input id="pPrice" type="number" step="0.01" />
+        </div>
+        <div class="col">
+          <label>القسم</label>
+          <select id="pCategory">
+            <option value="men">رجالي</option>
+            <option value="women">حريمي</option>
+            <option value="offers">العروض الخاصة</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label>نسبة الخصم (%)</label>
+          <input id="pDiscount" type="number" min="0" max="100" value="0" />
+        </div>
+        <div class="col">
+          <label>رابط الصورة (Image URL)</label>
+          <input id="pImageUrl" type="text" placeholder="https://..." />
+        </div>
+      </div>
+
+      <div style="margin-top:8px">
+        <button id="addProductBtn" class="btn">أضف المنتج</button>
+        <div id="addMsg" class="msg"></div>
+      </div>
+    </div>
+
+    <div class="form-block">
+      <h3>الإعدادات (واتساب + شعار)</h3>
+      <label>رقم واتساب</label>
+      <input id="waNumber" type="text">
+
+      <label>رابط الشعار (Logo URL)</label>
+      <input id="logoUrl" type="text" placeholder="https://...">
+
+      <div style="margin-top:8px">
+        <button id="saveSettings" class="btn">حفظ الإعدادات</button>
+        <div id="settingsMsg" class="msg"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="admin-section">
+    <h3>قائمة المنتجات (تعديل / حذف)</h3>
+    <div id="productsList" class="products-list"></div>
+  </section>
+
+</div>
+</body>
+</html>
